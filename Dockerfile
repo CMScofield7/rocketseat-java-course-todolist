@@ -12,6 +12,9 @@ COPY . .
 RUN apt-get install maven -y
 RUN mvn clean install
 
+# Imagem base
+FROM openjdk:17-jdk-slim
+
 # Expor a porta 8080
 EXPOSE 8080
 
